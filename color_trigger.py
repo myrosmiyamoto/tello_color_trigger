@@ -87,12 +87,12 @@ class TelloControl:
 
                 # 赤色のHSVの値域
                 # ここの値を変更することで他の色にも対応できる
-                h_min = 0
-                h_max = 7
-                s_min = 100
-                s_max = 255
-                v_min = 100
-                v_max = 255
+                h_min = 0    # 色相の最小値
+                h_max = 7    # 色相の最大値
+                s_min = 100  # 彩度の最小値
+                s_max = 255  # 彩度の最大値
+                v_min = 100  # 明度の最小値
+                v_max = 255  # 明度の最大値
 
                 # inRange関数で範囲指定2値化
                 bin_image = cv2.inRange(hsv_image, (h_min, s_min, v_min), (h_max, s_max, v_max)) # HSV画像なのでタプルもHSV並び
