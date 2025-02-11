@@ -132,7 +132,7 @@ class TelloControl:
                     if  s > 20000 and self.is_automode and not self.is_tello_control:
                         Thread(target=self._tello_control, args=('color_trigger', )).start()
 
-                cv2.imshow('Result Image', result_image)
+                cv2.imshow(self.frame_name, result_image)
 
                 key = cv2.waitKey(1) & 0xFF
                 # ESCキーが押されたら、また、ウィンドウが終了したらストップ
